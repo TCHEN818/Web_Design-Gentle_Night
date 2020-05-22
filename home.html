@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>HOME PAGE CHENZETAO</title>
+    <!--引入css-->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <!--  手风琴-->
+<!--    <link rel="stylesheet" type="text/css" href="css/default.css">-->
+    <link rel="stylesheet" href="css/fengqin.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+<!--瀑布流-->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,600|Open+Sans:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/sortable.min.css">
+
+<!--form 表单-->
+<!--    <link href="css/style.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--手风琴 -->
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/limit.js"></script>
+    <script src="js/zA7n.js"></script>
+    <script>
+        $(window).load(function () {
+            $('#zA7n').zA7n({});
+        });
+    </script>
+    <!--    瀑布流-->
+    <script type="text/javascript" src="js/sortable.min.js"></script>
+
+
+
+    <!-- 全局标签设置-->
+    <style type ="text/css">
+        /*body{*/
+        /*    background: url("img/bg.jpg");*/
+        /*    !*background: rgba(0,0,0,0);*!*/
+        /*}*/
+        .img-fall:hover{
+            opacity: 80%;
+        }
+        .footer-a a:hover{
+            font-color: white;
+        }
+        .img-lunbo{
+            width:100%;
+        }
+        /*导航字体*/
+        .navbar a{
+            font-family: Microsoft YaHei;
+
+        }
+        /*轮播设置*/
+        .damu-carousel{
+            margin-top: 50px;
+            height: 700px;
+            overflow: hidden;
+        }
+        .damu-carousel h1{
+            font-size: 130px;
+            /*text-align: right;*/
+            height: 600px;
+        }
+        /*响应式 适配移动手机*/
+        @media only screen and (max-width: 768px) {
+            .damu-carousel{
+                height: 200px;
+            }
+            .damu-carousel h1{
+                font-size: 40px;
+                /*text-align: right;*/
+                height: 120px;
+            }
+
+        }
+    /*  三列*/
+        .row{
+            margin-top: 100px;
+        }
+        .marketing .col-lg-3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .marketing .tc-head {
+            font-weight: normal;
+        }
+        .marketing .col-lg-4 p {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    /* 图文*/
+        .featurette-divider {
+            margin: 40px 0; /* Space out the Bootstrap <hr> more */
+
+        }
+
+        /* Thin out the marketing headings */
+        .featurette-heading {
+            font-size: 40px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -1px;
+            /*margin-top: 120px;*/
+        }
+        @media (min-width: 992px) {
+            .featurette-heading {
+                margin-top: 120px;
+            }
+        }
+
+
+    /*  表单*/
+        input,
+        textarea {
+            width: 100%;
+            background: none;
+            border: 1px solid #0f0f0f;
+            /*color: #ee3449;*/
+            padding: 10px 20px;
+
+        }
+        div#contact {
+            /*background: url('img/footer_bg.jpg');*/
+            background-size: cover;
+            font-family: 'raleway', sans-serif;
+            text-align:center;
+            margin-bottom: 10px;
+        }
+        .contact_overlay {
+            /*background: rgba(0,0,0,0.1);*/
+        }
+
+        div#contact h2.section_title {
+            text-align: center;
+            color: black;
+            font-size: 40pt;
+            padding: 80px 0px 20px;
+        }
+
+        form.contact {
+            display: inline-block;
+            font-family: 'play', sans-serif;
+        }
+
+        input.contact_name,
+        input.contact_email,
+        textarea.contact_message {
+            margin: 20px 0px;
+            color: black;
+        }
+
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder  {
+            color: black;
+        }
+
+        button.contact_submit {
+            background: none;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 40px;
+            text-transform: uppercase;
+            transition:.2s all ease-in-out;
+        }
+
+        button.contact_submit:hover {
+            color: #fff;
+            background: black;
+            border-color: white;
+        }
+    </style>
+
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Gentle Night</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+<!--                <li><a href="#">Link</a></li>-->
+<!--                <li class="dropdown">-->
+<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li><a href="#">Action</a></li>-->
+<!--                        <li><a href="#">Another action</a></li>-->
+<!--                        <li><a href="#">Something else here</a></li>-->
+<!--                        <li role="separator" class="divider"></li>-->
+<!--                        <li><a href="#">Separated link</a></li>-->
+<!--                        <li role="separator" class="divider"></li>-->
+<!--                        <li><a href="#">One more separated link</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <form class="navbar-form navbar-left">-->
+<!--                <div class="form-group">-->
+<!--                    <input type="text" class="form-control" placeholder="Search">-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-default">Submit</button>-->
+<!--            </form>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#img-right">About Us</a></li>
+                <li><a href="#img-left">Services</a></li>
+                <li><a href="teampage.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://mail.qq.com/" target="_blank">QQmail</a></li>
+                        <li><a href="https://mail.google.com" target="_blank">Gmail</a></li>
+<!--                        <li><a href="#">Something else here</a></li>-->
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://wx.qq.com/?lang=en_US" target="_blank">Wechat</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!--轮播大图-->
+<div id="carousel-example-generic" class="carousel slide damu-carousel" data-ride="carousel" data-interval="3000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-lunbo" src="img/lunbo2.jpg" alt="...">
+            <div class="carousel-caption">
+                <h1>MISSION COMPLETED</h1>
+            </div>
+        </div>
+        <div class="item">
+            <img class="img-lunbo" src="img/lunbo1.jpg" alt="...">
+            <div class="carousel-caption">
+                <h1>SO CLOSE</h1>
+            </div>
+        </div>
+        <div class="item">
+            <img class="img-lunbo" src="img/lunbo3.jpg" alt="...">
+            <div class="carousel-caption">
+                <h1>ALMOST THERE</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<hr>
+<!--中间展示-->
+ <div class="container marketing">
+
+<!--     图在右-->
+     <div class="row featurette" id="img-right">
+         <div class="col-md-7">
+             <h2 class="featurette-heading">We are experienced. <span class="text-muted">Once you come you will know.</span></h2>
+             <p class="lead">Professional personnel reserves and solid aerospace equipment. All this will serve your starry sky dream.</p>
+         </div>
+         <div class="col-md-5">
+             <img class="featurette-image img-responsive center-block" src="img/intro1.jpg" alt="Generic placeholder image">
+         </div>
+     </div>
+     <hr class="featurette-divider">
+
+
+<!-- 四列显示-->
+     <div class="row">
+         <h2 class="section_title" style="text-align: center;text-align: center;color: black;font-size: 40pt;">Best Team</h2>
+         <p style="text-align: center;padding: 0px 0px 50px">We deliver love and dreams to every corner of the world for you.</p>
+         <div class="col-lg-3">
+             <img class="img-circle" src="img/zt4.png" alt="Generic placeholder image" width="140" height="140">
+             <h2 class="tc-head">CHEN Zetao</h2>
+             <p>Developer </p>
+
+
+         </div><!-- /.col-lg-4 -->
+         <div class="col-lg-3">
+             <img class="img-circle" src="img/zc1.png" alt="Generic placeholder image" width="140" height="140">
+             <h2 class="tc-head">YANG Zhichao</h2>
+             <p>Designer & 小镇青年</p>
+
+         </div><!-- /.col-lg-4 -->
+         <div class="col-lg-3">
+             <img class="img-circle" src="img/ky1.jpg" alt="Generic placeholder image" width="140" height="140">
+             <h2 class="tc-head">Xu Keyu</h2>
+             <p>Dreamer & Designer</p>
+
+         </div><!-- /.col-lg-4 -->
+         <div class="col-lg-3">
+             <img class="img-circle" src="img/mj1.jpg" alt="Generic placeholder image" width="140" height="140">
+             <h2 class="tc-head">Xia Mingjun</h2>
+             <p>Astronaut & Designer</p>
+
+         </div><!-- /.col-lg-4 -->
+
+     </div><!-- /.row -->
+
+     <hr class="featurette-divider">
+     <!--图在左-->
+     <div class="row featurette" id="img-left">
+         <div class="col-md-7 col-md-push-5">
+             <h2 class="featurette-heading">We are couriers in outer space. <span class="text-muted">Record you with this splendid galaxy.</span></h2>
+             <p class="lead" style="font-size: 18.9px">We provide a variety of space customization services for different customer needs. Including express personal items to outer space, personal first outer space tour and private customized multi-person luxury outer space tour, etc.</p>
+         </div>
+         <div class="col-md-5 col-md-pull-7">
+             <img class="featurette-image img-responsive center-block" src="img/intro2.jpg" alt="Generic placeholder image">
+         </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+ </div>
+<!--手风琴展示-->
+<div class="htmleaf-container1">
+
+    <div class="htmleaf-content bgcolor-4">
+        <div class="accordion" id="zA7n">
+            <ul class="accordion__ul">
+                <li class="accordion__li"><img class="accordion__img" src="img/1.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/2.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/6.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/9.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/10.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/3.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/7.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/11.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/12.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/4.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/5.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/8.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/13.jpg" alt="" /></li>
+                <li class="accordion__li"><img class="accordion__img" src="img/14.jpg" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+<!--瀑布流-->
+<div class="fall-container">
+
+    <main class="sortable">
+        <div class="container2">
+            <div class="wrapper">
+                <ul class="sortable__nav nav">
+                    <li>
+                        <a data-sjslink="all" class="nav__link" style="cursor:pointer">
+                            All
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="set1" class="nav__link" style="cursor:pointer">
+                            Set One
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="set2" class="nav__link" style="cursor:pointer">
+                            Set Two
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="set3" class="nav__link" style="cursor:pointer">
+                            Set Three
+                        </a>
+                    </li>
+                </ul>
+                <div id="sortable" class="sjs-default">
+                    <div data-sjsel="set1">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-1.jpg" alt="" >
+                            <div class="card-infos">
+                                <h2 class="card__title">Express It</h2>
+                                <p class="card__text">昨夜星辰昨夜風，畫樓西畔桂堂東。 </p>
+                                <p class="card__text">A junior high school boy sent his beloved Gundam model into space. He wanted to see if there were anyone in the galaxy who was as enthusiastic about Gundam as he was.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set1">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-2.jpg" alt="">
+                            <div class="card-infos">
+                                <h2 class="card__title">Express It</h2>
+                                <p class="card__text">誰將星移萬點，月滿千街。 </p>
+                                <p class="card__text">We are experienced space couriers. You can give us your precious with peace mind and make it eternal in the galaxy.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set3">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-3.jpg" alt="" >
+                            <div class="card-infos">
+                                <h2 class="card__title">Private Customization</h2>
+                                <p class="card__text">天上星河轉，人間簾幕垂。 </p>
+                                <p class="card__text">Our company launches private customized services for you and your important one. The service includes one-day access to a spaceship and the provision of professional pilots.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set1">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-4.jpg" alt="" >
+                            <div class="card-infos">
+                                <h2 class="card__title">Express It</h2>
+                                <p class="card__text">天階夜色涼如水，坐看牽牛織女星。 </p>
+                                <p class="card__text">We once helped a camera company to send their latest camera to space, and we hoped to use an excellent camera to record the gorgeous face of the universe.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set1">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-5.jpg" alt="" >
+                            <div class="card-infos">
+                                <h2 class="card__title">Express It</h2>
+                                <p class="card__text">幾回花下坐吹簫，銀漢紅牆入望遙。 </p>
+                                <p class="card__text">A mother entrusted us to send a watch that stopped working to space, which was given to her by her husband during the period of love. She hopes to preserve those youth years that will never come back.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set2">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-6.jpg" alt="">
+                            <div class="card-infos">
+                                <h2 class="card__title">Express You</h2>
+                                <p class="card__text">無端星月浸窗紗。 </p>
+                                <p class="card__text">Flying dreams as a child, now we can help you realize. Our company provides a single-person, one-time round trip experience of the universe. You can stay in our private space station for one day and watch the sunrise and sunset from another angle.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set1">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-7.jpg" alt="">
+                            <div class="card-infos">
+                                <h2 class="card__title">Express It</h2>
+                                <p class="card__text">暮云收尽溢清寒，银汉无声转玉盘。 </p>
+                                <p class="card__text">A young female college student hopes to send a record player to play the entire album of her favorite singer. "Can he be famous all over the galaxy by doing this?"</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set3">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-8.jpg" alt="">
+                            <div class="card-infos">
+                                <h2 class="card__title">Private Customization</h2>
+                                <p class="card__text">長天淨，絳河清淺，皓月嬋娟。 </p>
+                                <p class="card__text">In your space tour, we can also provide photos and videos to record this wonderful moment for you, please ask our staff for more detailed information.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sjsel="set2">
+                        <div class="card">
+                            <img class="card__picture img-fall" src="./img/item-9.jpg" alt="">
+                            <div class="card-infos">
+                                <h2 class="card__title">Express You</h2>
+                                <p class="card__text">仰戴星月觀雲間。 </p>
+                                <p class="card__text">The strong technical team and solid space equipment make us confident to bring a wonderful experience for your first space journey.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</div>
+
+<hr style="margin-top: 50px">
+
+
+
+<!--联系我们表单-->
+<div id="contact">
+    <div class="contact_overlay">
+        <div class="container">
+            <h2 class="section_title" style="text-align: center">GET IN TOUCH</h2>
+
+            <form action="" class="contact">
+            <div class="col-md-6">
+            <input type="text" name="username" class="contact_name" placeholder="Type Your Name Please" />
+            </div>
+            <div class="col-md-6">
+            <input type="text" name="email" class="contact_email" placeholder="Type Your E-mail Please" />
+            </div>
+            <div class="col-md-12">
+            <textarea rows="10" cols="100" name="your-message" class="contact_message" placeholder="Tell Us What You Want"></textarea>
+            <button type="submit" class="contact_submit">CONTACT US</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+<!--页脚-->
+<footer>
+    <div id="footer" style="background:#2f3238;height: 80px">
+    &nbsp
+<!--   text-->
+     <div id="foot" class="container">
+        <h5 style="color: white;text-align: center">Hello from ZeTao &nbsp&nbsp&nbsp @2020 AIDM HKBU
+            &nbsp&nbsp&nbsp<a class="footer-a" href="# " style="color:#b9def0;">Get project from Github</a>
+
+            </h5>
+
+<!--/*logo*/-->
+<!--/*logo*/-->
+         <p class="pull-right"><a class="footer-a" href="#" style="color:white;"> <span class="glyphicon glyphicon-triangle-top" ></span> Back to top</a></p>
+     </div>
+
+    </div>
+    </div>
+</footer>
+
+<!--瀑布流js-->
+
+<script type="text/javascript">
+    document.querySelector('#sortable').sortablejs()
+</script>
+</body>
+</html>

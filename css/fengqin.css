@@ -1,0 +1,11 @@
+.row { margin:0 0 30px;padding:0; }
+
+/* .accordion */
+.accordion { height:300px;overflow: hidden;position:relative; }
+.accordion:after { content: "";display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: #fff; }
+.accordion._create:after { display: none; }
+
+.accordion__ul { display:block;list-style: none;margin: 0;padding: 0;width:9999px;height:300px;overflow:hidden;position:absolute;left:0;top:0; }
+.accordion__li { display:block;list-style: none;margin: 0;padding: 0;height:300px;float:left;overflow: hidden;box-shadow: 0 0 10px 0 #000;transition: all 0.3s ease-out; }
+.accordion__img { display: block;cursor: pointer; }
+/* /.accordion */
